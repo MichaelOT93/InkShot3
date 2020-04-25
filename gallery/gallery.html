@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tattoo Gallery</title>
+	<link href="../style/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Coustard:400,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.typekit.net/xie3low.css">
+	<script src="https://kit.fontawesome.com/54f27bdb7c.js" crossorigin="anonymous"></script>
+	<script src="../script/script.js"></script>
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+</head>
+<body>
+	<div class="wrapper">
+		
+		<div class="navBar" id="navBar">
+		
+			<a href="../index.html"><img src="../images/InkShot.svg" id="logo"></a>
+			<a href="../index.html" id="home"><h3 class="hover" id="h">Home</h3></a>
+			<a href="gallery.html"><h3 class="active hover" id="g">Gallery</h3>
+			<a href="../about/about.html" id="about"><h3 class="hover" id="a">About</h3></a>
+			<a href="../contact/contact.html" id="contact"><h3 class="hover" id="c">Contact</h3></a>
+			<a class="hamburger" onclick="hamburger()">
+				<i class="fa fa-bars"></i>
+			</a>
+			
+		
+		</div>
+		
+		
+		
+		<div class="navMenu" id="navMenu">
+			<ul>
+				<a href="../index.html"><li>Home</li></a>
+				<a href="gallery/gallery.html"><li>Gallery</li></a>
+				<a href="../about/about.html"><li>About</li></a>
+				<a href="../contact/contact"><li>Contact</li></a>
+			</ul>
+		</div>
+		
+		
+		<div class="buffer" id="buffer"></div>
+		<div class="sideFormContainer" id="sideForm">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeSideForm()">&times;</a>
+				
+		<div class="Form">
+			<h2>Book your Tat</h2>
+				<form action="">
+				
+					<label for="fName" id="fnLabel">First Name</label>
+					<input type="text" id="fName" name="name">
+					
+					<label for="sName" id="snLabel">Surname</label>
+					<input type="text" id="sName" name="business">
+					
+					<label for="email" id="emLabel">Email Address</label>
+					<input type="text" id="email" name="emailAddress">
+					
+					<label for="phone" id="phLabel">Phone</label>
+					<input type="text" id="phone" name="phoneNumber">
+					
+					<label for="type">Type of Tattoo</label>
+					<select id="tatList">
+						<option value = "1">Half-Sleeve</option>
+						<option value = "2">Full-Sleeve</option>
+						<option value = "3">Body(Front)</option>
+						<option value = "4">Body(Back)</option>
+						<option value = "5">Half-Leg</option>
+						<option value = "6">Full-Leg</option>
+					</select>
+					
+					
+					
+					<label for="description" id="tDesc">Tattoo Description</label>
+					<textarea id="description" name="description" style="height:80px"></textarea>
+					
+					<label for="example">Upload an image of what you'd like</label>
+					<input type="file" id="myIdea" name="myIdea">
+					
+					<input type="submit" value="Submit">
+				</form>
+		</div>
+		</div>
+		<div class="middleFormContainer" id="middleForm">
+		<a href="javascript:void(0)" class="closebtn" id="pierceClose" onclick="closeMiddleForm()">&times;</a>
+		<div class="Form" id="pierceForm">
+			<h2>Book your Piercing</h2>
+				<form action="">
+				
+					<label for="fName" id="fnLabel">First Name</label>
+					<input type="text" id="fName" name="name">
+					
+					<label for="sName" id="snLabel">Surname</label>
+					<input type="text" id="sName" name="business">
+					
+					<label for="email" id="emLabel">Email Address</label>
+					<input type="text" id="email" name="emailAddress">
+					
+					<label for="phone" id="phLabel">Phone</label>
+					<input type="text" id="phone" name="phoneNumber">
+					
+					<label for="type">Type of Piercing</label>
+					<select id="tatList">
+						<option value = "1">Body Piercing</option>
+						<option value = "2">Dermal Piercing</option>
+						<option value = "3">Ear Piercing</option>
+						<option value = "4">Facial Piercing</option>
+						<option value = "5">Oral Piercing</option>
+					</select>
+					
+					
+					
+					
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+		<div class="rightFormContainer" id="rightForm">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeRightForm()">&times;</a>
+		<div class="Form">
+			<h2>Bad tat? We can remove that!</h2>
+				<form action="">
+				
+					<label for="fName" id="fnLabel">First Name</label>
+					<input type="text" id="fName" name="name">
+					
+					<label for="sName" id="snLabel">Surname</label>
+					<input type="text" id="sName" name="business">
+					
+					<label for="email" id="emLabel">Email Address</label>
+					<input type="text" id="email" name="emailAddress">
+					
+					<label for="phone" id="phLabel">Phone</label>
+					<input type="text" id="phone" name="phoneNumber">
+
+					
+					<input type="submit" value="Submit">
+				</form>
+		</div>
+		</div>
+		
+		<div class="galMainGrid">
+			<div class="mainPic">
+			</div>
+			<div class="twoHSplit">	
+				<div class="hTop">
+				</div>
+				<div class="hBottom">
+				</div>
+			</div>
+			<div class="fancyPanels">
+				<div class="longOne">
+				</div>
+				<div class="longTwo">
+					<div class="longTwoTop">
+					</div>
+					<div class="longTwoBottom">
+					</div>
+				</div>
+				<div class="longThree">
+					<div class="longThreeTop">
+					</div>
+					<div class="longThreeBottom">
+					</div>
+				</div>
+				<div class="longFour">
+					<div class="longFourTop">
+					</div>
+					<div class="longFourBottom">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="lowerGrid">
+			<div class="horizontalGrid">
+				<div class="hozTop">
+				</div>
+				<div class="hozTM">
+				</div>
+				<div class="hozBM">
+				</div>
+				<div class="hozBottom">
+				</div>
+			</div>
+			<div class="bottomSplit">
+				<div class="bottomTop">
+				<a class="facebookBig" href="https://facebook.com/Inkshot-Tat-Arklow-789769311116346/" target="_blank"><i class="fab fa-facebook"></i></a>
+				<a class="instaBig" href="https://www.instagram.com/inkshot_tattoo_saloon_/" target="_blank"><i class="fab fa-instagram"></i></a>
+				
+			</div>
+				<div class="bottomBottom">
+					<div class="galButtonContainer">
+					<a class="bookTat" onclick="openForm()">
+					<svg class="tatGunGal" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 686 686" style="enable-background:new 0 0 686 686;" xml:space="preserve">
+									<g id="Layer_2_1_">
+										<g id="Layer_1-2">
+											<circle class="gunBack" cx="343" cy="343" r="338"/>
+											<path class="gunFore" d="M186.6,589.7l35.6-27.6h0.7c2.8,0,5.5-1.1,7.5-3.1l16-16c4.5,1.9,9.7,0.8,13.2-2.6l12.7-12.7
+												c10.6,8.7,26.1,8,35.8-1.7l23.9-23.9c3-2.9,3.1-7.6,0.2-10.6c-2.9-3-7.6-3.1-10.6-0.2c-0.1,0.1-0.1,0.1-0.2,0.2l-23.9,23.9
+												c-4.5,4.5-11.8,4.5-16.4,0l-38.1-38.1c-4.5-4.5-4.5-11.8,0-16.4l78.4-78.4c4.5-4.5,11.8-4.5,16.4,0l38.1,38.1
+												c4.5,4.5,4.5,11.8,0,16.4L346,466.7c-2.9,3-2.8,7.7,0.2,10.6c2.9,2.8,7.5,2.8,10.4,0l29.7-29.7c9.8-9.8,10.4-25.6,1.3-36.1
+												l4.4-4.4l7.1,7.1c8.7,7.7,21.9,7,29.6-1.7c7.1-8,7.1-20,0-28l-7.1-7.1l10.3-10.2c3.6-3.6,4.5-9,2.4-13.6l69.2-69.2
+												c17.3,0.9,32-12.5,32.8-29.7c0.4-8.8-2.9-17.4-9.1-23.7l0,0c-6.6-6.6-15.7-9.9-24.9-9l-57.1-57.2c-2.9-2.9-7.7-2.9-10.6,0
+												c-2.9,2.9-2.9,7.7,0,10.6l52.3,52.3c-3.3,2.4-6,5.3-8.2,8.7l-94.8-94.8l-29.4-29.4c-6.4-6.4-16.9-6.4-23.3,0l-86.3,86.3
+												c-6.4,6.4-6.4,16.9,0,23.3l125.4,125.3l-8.4,8.4L236.5,230.2c-11.1-11.1-11.1-29.1,0-40.2l86.3-86.3c11.1-11.1,29.1-11.1,40.2,0
+												l46.9,46.9c3,2.9,7.7,2.8,10.6-0.2c2.8-2.9,2.8-7.5,0-10.4l-46.9-46.9c-16.9-17-44.4-17-61.4,0c0,0,0,0,0,0l-86.3,86.3
+												c-16.9,17-16.9,44.4,0,61.4l125.4,125.4l-4.4,4.4c-10.5-9.1-26.3-8.5-36.1,1.3l-78.4,78.4c-9.7,9.7-10.4,25.1-1.7,35.7l-12.7,12.7
+												c-3.5,3.5-4.5,8.7-2.6,13.2l-16.1,16.1c-2.1,2.2-3.2,5.1-3,8.1l-27.6,35.5c-4.4,5.6-3.4,13.7,2.3,18.1
+												C175.5,593.3,182.1,593.3,186.6,589.7L186.6,589.7z M418.2,403.5c-2.3,2.3-6.1,2.3-8.4,0l-7.1-7.1l8.4-8.4l7.1,7.1
+												C420.5,397.4,420.5,401.2,418.2,403.5z M493.6,241.6L493.6,241.6L493.6,241.6c6.4-6.4,16.7-6.3,23,0c6.4,6.4,6.3,16.7,0,23
+												c-6.4,6.3-16.7,6.3-23,0C487.2,258.3,487.2,248,493.6,241.6z M479.2,270.6c2.3,3.3,5.1,6.2,8.4,8.4l-63.4,63.4l-8.4-8.4
+												L479.2,270.6z M279.6,235.3l-24.1-24.1c-0.6-0.6-0.6-1.5,0-2.1l86.3-86.3c0.6-0.6,1.5-0.6,2.1,0l24.1,24.1l-6,6l-3.4-3.4
+												c-7.1-7.1-18.7-7.1-25.9,0L282.3,200c-7.1,7.1-7.1,18.7,0,25.9l3.4,3.4L279.6,235.3z M365.3,182.2l-50.5,50.5
+												c-1.3,1.3-3.3,1.3-4.6,0l-17.4-17.4c-1.2-1.3-1.2-3.3,0-4.6l50.5-50.5c1.3-1.3,3.3-1.3,4.6,0l17.4,17.4
+												C366.6,178.8,366.6,180.9,365.3,182.2L365.3,182.2z M330.4,286.1l-40.2-40.2l6-6l3.4,3.4c7.1,7.1,18.7,7.1,25.8,0l50.5-50.5
+												c7.1-7.1,7.1-18.7,0-25.8l-3.4-3.4l6-6l40.2,40.2l-6,6l-3.4-3.4c-7.1-7.1-18.7-7.1-25.8,0L333,250.9c-7.1,7.1-7.1,18.7,0,25.8
+												l3.4,3.4L330.4,286.1z M416.1,233l-50.5,50.5c-0.6,0.6-1.5,0.9-2.3,0.9c-0.9,0-1.7-0.3-2.3-0.9l-8.7-8.7l0,0l-8.7-8.7
+												c-1.3-1.3-1.3-3.3,0-4.6l50.5-50.5c1.3-1.3,3.3-1.3,4.6,0l17.4,17.4C417.4,229.6,417.4,231.7,416.1,233L416.1,233z M341,296.7l6-6
+												l3.4,3.4c7.1,7.1,18.7,7.1,25.8,0l50.5-50.5c7.1-7.1,7.1-18.7,0-25.9l-3.4-3.4l6-6l44.5,44.5c0,0.6,0,1.3,0,1.9L404.7,324
+												c-4.6-2.1-10-1.2-13.6,2.4l-10.2,10.2L341,296.7z M399.6,339l19.6,19.7l-42.1,42.1l-19.6-19.6L399.6,339z M241.1,496.7l20.5,20.5
+												L251,527.8l-20.5-20.5L241.1,496.7z M225.2,523.2l9.9,9.9l-12.2,12.2l-9.9-9.9L225.2,523.2z M205.2,548.9l0.7,0.7l3.5,3.5
+												l-18.7,14.5L205.2,548.9z"/>
+										</g>
+									</g>
+								</svg>
+							</a>
+							
+					<svg class="earringGal" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											 viewBox="0 0 694 694" style="enable-background:new 0 0 694 694;" xml:space="preserve" onclick="openMiddleForm()" >
+										
+										<g id="Layer_2_1_">
+											<g id="Layer_1-2">
+												<circle class="earCircle" cx="347" cy="347" r="338"/>
+												<path class="ball" d="M271,543c0,33.1-26.9,60-60,60s-60-26.9-60-60s26.9-60,60-60S271,509.9,271,543L271,543z"/>
+												<path class="ball" d="M543,543c0,33.1-26.9,60-60,60s-60-26.9-60-60s26.9-60,60-60S543,509.9,543,543L543,543z"/>
+												<path class="arch" d="M347,91C206.2,91,91,206.2,91,347c-0.1,52.1,15.7,103,45.3,145.9c11.6-17,28.7-29.6,48.4-35.5
+													c-22-32.6-33.7-71.1-33.7-110.4c0-107.5,88.5-196,196-196s196,88.5,196,196c0,39.3-11.7,77.8-33.7,110.4
+													c19.7,6,36.8,18.5,48.4,35.5C587.3,450,603.1,399.1,603,347C603,206.2,487.8,91,347,91z"/>
+											</g>
+										</g>
+								</svg>
+					<svg class="removalButtonGal" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										viewBox="0 0 694 694" style="enable-background:new 0 0 694 694;" xml:space="preserve" onclick="openRightForm()">
+
+									<g id="Layer_2_1_">
+										<g id="Layer_1-2">
+											<circle class="remove" cx="346" cy="348.5" r="338"/>
+											<path ="anchor" d="M582.3,377.6c-32.7,71.8-96.2,124.9-172.6,144.4c-14.7,3.6-29.6-5.3-33.2-20c-0.5-2.2-0.8-4.4-0.8-6.7V322.6
+												c0-7.7,6.2-13.9,13.9-13.9c0,0,0,0,0,0h56.3c15.9,0,28.7-12.8,28.7-28.7c0-15.9-12.8-28.7-28.7-28.7c0,0,0,0,0,0h-56.3
+												c-7.7,0-13.9-6.2-13.9-13.9v-56.3c0-7.2,3.7-13.8,9.7-17.7c33.8-21.8,43.5-66.9,21.7-100.7S340.2,19.2,306.4,41
+												s-43.5,66.9-21.7,100.7c5.7,8.8,13.2,16.3,22,21.9c5.9,3.8,9.5,10.4,9.5,17.5v56.3c0,7.7-6.2,13.9-13.9,13.9h-55.8
+												c-15.7,0-28.4,12.6-28.7,28.3v0.5c0,15.9,12.9,28.7,28.7,28.7h55.8c7.7,0,13.9,6.2,13.9,13.9c0,0,0,0,0,0v172.8
+												c0,15.1-12.2,27.4-27.4,27.5c-2.2,0-4.5-0.3-6.6-0.8c-76.4-19.5-139.9-72.7-172.6-144.4c-16.4-36.1-71.5-11.1-55.2,24.9
+												c42,92.6,128.7,164.2,235.7,183c15.1,2.6,26.1,15.7,26.1,31v21.7c0,16.2,12.6,30,28.7,30.5c16.4,0.6,30.2-12.3,30.8-28.8
+												c0-0.3,0-0.7,0-1v-22.5c0-15.3,11-28.4,26.1-31c106.4-18.6,193.4-89.9,235.7-183C654,366.2,598.6,341.8,582.3,377.6z M364.7,106.6
+												c-0.2,10.4-8.9,18.6-19.2,18.4c-10-0.2-18.1-8.3-18.4-18.4v-8.9c0.2-10.4,8.9-18.6,19.2-18.4c10,0.2,18.1,8.3,18.4,18.4V106.6z"/>
+											<line class="canc" x1="142.1" y1="78.9" x2="603" y2="568"/>
+										</g>
+									</g>
+						</svg>
+					</div>
+			
+		</div>
+	
+	</div>	
+	</div>
+	<div class="bottomSplitMobile">
+			<div class="bottomTopMobile">
+				<a class="facebookBig" href="https://facebook.com/Inkshot-Tat-Arklow-789769311116346/" target="_blank"><i class="fab fa-facebook"></i></a>
+				<a class="instaBig" href="https://www.instagram.com/inkshot_tattoo_saloon_/" target="_blank"><i class="fab fa-instagram"></i></a>
+				
+				</div>
+				<div class="bottomBottomMobile">
+					<div class="galButtonContainer">
+					<a class="bookTat" onclick="openForm()">
+					<svg class="tatGunGal" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 686 686" style="enable-background:new 0 0 686 686;" xml:space="preserve">
+									<g id="Layer_2_1_">
+										<g id="Layer_1-2">
+											<circle class="gunBack" cx="343" cy="343" r="338"/>
+											<path class="gunFore" d="M186.6,589.7l35.6-27.6h0.7c2.8,0,5.5-1.1,7.5-3.1l16-16c4.5,1.9,9.7,0.8,13.2-2.6l12.7-12.7
+												c10.6,8.7,26.1,8,35.8-1.7l23.9-23.9c3-2.9,3.1-7.6,0.2-10.6c-2.9-3-7.6-3.1-10.6-0.2c-0.1,0.1-0.1,0.1-0.2,0.2l-23.9,23.9
+												c-4.5,4.5-11.8,4.5-16.4,0l-38.1-38.1c-4.5-4.5-4.5-11.8,0-16.4l78.4-78.4c4.5-4.5,11.8-4.5,16.4,0l38.1,38.1
+												c4.5,4.5,4.5,11.8,0,16.4L346,466.7c-2.9,3-2.8,7.7,0.2,10.6c2.9,2.8,7.5,2.8,10.4,0l29.7-29.7c9.8-9.8,10.4-25.6,1.3-36.1
+												l4.4-4.4l7.1,7.1c8.7,7.7,21.9,7,29.6-1.7c7.1-8,7.1-20,0-28l-7.1-7.1l10.3-10.2c3.6-3.6,4.5-9,2.4-13.6l69.2-69.2
+												c17.3,0.9,32-12.5,32.8-29.7c0.4-8.8-2.9-17.4-9.1-23.7l0,0c-6.6-6.6-15.7-9.9-24.9-9l-57.1-57.2c-2.9-2.9-7.7-2.9-10.6,0
+												c-2.9,2.9-2.9,7.7,0,10.6l52.3,52.3c-3.3,2.4-6,5.3-8.2,8.7l-94.8-94.8l-29.4-29.4c-6.4-6.4-16.9-6.4-23.3,0l-86.3,86.3
+												c-6.4,6.4-6.4,16.9,0,23.3l125.4,125.3l-8.4,8.4L236.5,230.2c-11.1-11.1-11.1-29.1,0-40.2l86.3-86.3c11.1-11.1,29.1-11.1,40.2,0
+												l46.9,46.9c3,2.9,7.7,2.8,10.6-0.2c2.8-2.9,2.8-7.5,0-10.4l-46.9-46.9c-16.9-17-44.4-17-61.4,0c0,0,0,0,0,0l-86.3,86.3
+												c-16.9,17-16.9,44.4,0,61.4l125.4,125.4l-4.4,4.4c-10.5-9.1-26.3-8.5-36.1,1.3l-78.4,78.4c-9.7,9.7-10.4,25.1-1.7,35.7l-12.7,12.7
+												c-3.5,3.5-4.5,8.7-2.6,13.2l-16.1,16.1c-2.1,2.2-3.2,5.1-3,8.1l-27.6,35.5c-4.4,5.6-3.4,13.7,2.3,18.1
+												C175.5,593.3,182.1,593.3,186.6,589.7L186.6,589.7z M418.2,403.5c-2.3,2.3-6.1,2.3-8.4,0l-7.1-7.1l8.4-8.4l7.1,7.1
+												C420.5,397.4,420.5,401.2,418.2,403.5z M493.6,241.6L493.6,241.6L493.6,241.6c6.4-6.4,16.7-6.3,23,0c6.4,6.4,6.3,16.7,0,23
+												c-6.4,6.3-16.7,6.3-23,0C487.2,258.3,487.2,248,493.6,241.6z M479.2,270.6c2.3,3.3,5.1,6.2,8.4,8.4l-63.4,63.4l-8.4-8.4
+												L479.2,270.6z M279.6,235.3l-24.1-24.1c-0.6-0.6-0.6-1.5,0-2.1l86.3-86.3c0.6-0.6,1.5-0.6,2.1,0l24.1,24.1l-6,6l-3.4-3.4
+												c-7.1-7.1-18.7-7.1-25.9,0L282.3,200c-7.1,7.1-7.1,18.7,0,25.9l3.4,3.4L279.6,235.3z M365.3,182.2l-50.5,50.5
+												c-1.3,1.3-3.3,1.3-4.6,0l-17.4-17.4c-1.2-1.3-1.2-3.3,0-4.6l50.5-50.5c1.3-1.3,3.3-1.3,4.6,0l17.4,17.4
+												C366.6,178.8,366.6,180.9,365.3,182.2L365.3,182.2z M330.4,286.1l-40.2-40.2l6-6l3.4,3.4c7.1,7.1,18.7,7.1,25.8,0l50.5-50.5
+												c7.1-7.1,7.1-18.7,0-25.8l-3.4-3.4l6-6l40.2,40.2l-6,6l-3.4-3.4c-7.1-7.1-18.7-7.1-25.8,0L333,250.9c-7.1,7.1-7.1,18.7,0,25.8
+												l3.4,3.4L330.4,286.1z M416.1,233l-50.5,50.5c-0.6,0.6-1.5,0.9-2.3,0.9c-0.9,0-1.7-0.3-2.3-0.9l-8.7-8.7l0,0l-8.7-8.7
+												c-1.3-1.3-1.3-3.3,0-4.6l50.5-50.5c1.3-1.3,3.3-1.3,4.6,0l17.4,17.4C417.4,229.6,417.4,231.7,416.1,233L416.1,233z M341,296.7l6-6
+												l3.4,3.4c7.1,7.1,18.7,7.1,25.8,0l50.5-50.5c7.1-7.1,7.1-18.7,0-25.9l-3.4-3.4l6-6l44.5,44.5c0,0.6,0,1.3,0,1.9L404.7,324
+												c-4.6-2.1-10-1.2-13.6,2.4l-10.2,10.2L341,296.7z M399.6,339l19.6,19.7l-42.1,42.1l-19.6-19.6L399.6,339z M241.1,496.7l20.5,20.5
+												L251,527.8l-20.5-20.5L241.1,496.7z M225.2,523.2l9.9,9.9l-12.2,12.2l-9.9-9.9L225.2,523.2z M205.2,548.9l0.7,0.7l3.5,3.5
+												l-18.7,14.5L205.2,548.9z"/>
+										</g>
+									</g>
+								</svg>
+							</a>
+							
+					<svg class="earringGal" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											 viewBox="0 0 694 694" style="enable-background:new 0 0 694 694;" xml:space="preserve" onclick="openMiddleForm()" >
+										
+										<g id="Layer_2_1_">
+											<g id="Layer_1-2">
+												<circle class="earCircle" cx="347" cy="347" r="338"/>
+												<path class="ball" d="M271,543c0,33.1-26.9,60-60,60s-60-26.9-60-60s26.9-60,60-60S271,509.9,271,543L271,543z"/>
+												<path class="ball" d="M543,543c0,33.1-26.9,60-60,60s-60-26.9-60-60s26.9-60,60-60S543,509.9,543,543L543,543z"/>
+												<path class="arch" d="M347,91C206.2,91,91,206.2,91,347c-0.1,52.1,15.7,103,45.3,145.9c11.6-17,28.7-29.6,48.4-35.5
+													c-22-32.6-33.7-71.1-33.7-110.4c0-107.5,88.5-196,196-196s196,88.5,196,196c0,39.3-11.7,77.8-33.7,110.4
+													c19.7,6,36.8,18.5,48.4,35.5C587.3,450,603.1,399.1,603,347C603,206.2,487.8,91,347,91z"/>
+											</g>
+										</g>
+								</svg>
+					<svg class="removalButtonGal" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										viewBox="0 0 694 694" style="enable-background:new 0 0 694 694;" xml:space="preserve" onclick="openRightForm()">
+
+									<g id="Layer_2_1_">
+										<g id="Layer_1-2">
+											<circle class="remove" cx="346" cy="348.5" r="338"/>
+											<path ="anchor" d="M582.3,377.6c-32.7,71.8-96.2,124.9-172.6,144.4c-14.7,3.6-29.6-5.3-33.2-20c-0.5-2.2-0.8-4.4-0.8-6.7V322.6
+												c0-7.7,6.2-13.9,13.9-13.9c0,0,0,0,0,0h56.3c15.9,0,28.7-12.8,28.7-28.7c0-15.9-12.8-28.7-28.7-28.7c0,0,0,0,0,0h-56.3
+												c-7.7,0-13.9-6.2-13.9-13.9v-56.3c0-7.2,3.7-13.8,9.7-17.7c33.8-21.8,43.5-66.9,21.7-100.7S340.2,19.2,306.4,41
+												s-43.5,66.9-21.7,100.7c5.7,8.8,13.2,16.3,22,21.9c5.9,3.8,9.5,10.4,9.5,17.5v56.3c0,7.7-6.2,13.9-13.9,13.9h-55.8
+												c-15.7,0-28.4,12.6-28.7,28.3v0.5c0,15.9,12.9,28.7,28.7,28.7h55.8c7.7,0,13.9,6.2,13.9,13.9c0,0,0,0,0,0v172.8
+												c0,15.1-12.2,27.4-27.4,27.5c-2.2,0-4.5-0.3-6.6-0.8c-76.4-19.5-139.9-72.7-172.6-144.4c-16.4-36.1-71.5-11.1-55.2,24.9
+												c42,92.6,128.7,164.2,235.7,183c15.1,2.6,26.1,15.7,26.1,31v21.7c0,16.2,12.6,30,28.7,30.5c16.4,0.6,30.2-12.3,30.8-28.8
+												c0-0.3,0-0.7,0-1v-22.5c0-15.3,11-28.4,26.1-31c106.4-18.6,193.4-89.9,235.7-183C654,366.2,598.6,341.8,582.3,377.6z M364.7,106.6
+												c-0.2,10.4-8.9,18.6-19.2,18.4c-10-0.2-18.1-8.3-18.4-18.4v-8.9c0.2-10.4,8.9-18.6,19.2-18.4c10,0.2,18.1,8.3,18.4,18.4V106.6z"/>
+											<line class="canc" x1="142.1" y1="78.9" x2="603" y2="568"/>
+										</g>
+									</g>
+						</svg>
+					</div>
+				</div>
+			</div>
+		
+		
+		
+		
+		
+
+	<div class="footer">
+		
+			<p>57,Ferrybank,Arklow, Co. Wicklow,<p>
+			<p>0402 123456</P>
+			
+			<a class="insta" href="https://www.instagram.com/inkshot_tattoo_saloon_/" target="_blank"><i class="fab fa-instagram"></i></a>
+			<a class="facebook" href="https://facebook.com/Inkshot-Tat-Arklow-789769311116346/" target="_blank"><i class="fab fa-facebook"></i></a>
+		
+	</div>
+	</div>
+	
+</body>
+</html>
